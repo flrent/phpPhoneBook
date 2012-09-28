@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="public/resources/css/phonebook.css">
+	<title>Florent Lamoureux PhoneBook</title>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li>Accueil</li>
+				<li class="addForm">Ajouter un contact</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="main">
+		<div id="addForm">
+			<input type="hidden" value="0" name="id" />
+			<input type="text" value="" name="lastname" placeHolder="Entrez le nom de famille" />
+			<input type="text" value="" name="firstname" placeHolder="Entrez le prénom" />
+			<input type="text" value="" name="number" placeHolder="Entrez le téléphone" />
+		</div>
+		<h1>Hey ! Here is your contact list. Wanna <strong>add some</strong> ?</h1>
+		<div class="phoneBook">
+
+		</div>
+	</div>
+
+	<footer>
+		<p>Florent Lamoureux</p>
+	</footer>
+
+	<script type="text/javascript" src="public/resources/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="public/resources/js/phonebook.js"></script>
+</body>
+
+</html>

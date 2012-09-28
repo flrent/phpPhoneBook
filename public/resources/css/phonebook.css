@@ -1,0 +1,26 @@
+body {
+	background:#E3E3E3;
+	margin:auto;
+	width:800px;
+	font-family: Verdana;
+	font-size:12px;
+}
+li {list-style: none}
+
+header {}
+header ul {-webkit-padding-start:0;}
+header li {display: inline;padding:10px;background:#F8F8F8;color:#06F;border:1px solid #CCC;}
+
+#addForm {display:none;}
+.main {
+	border:1px solid #ccc;
+	background:#F8F8F8;
+	border-radius: 4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	padding:20px;
+}
+h1 {
+	color:#F60;
+	font-weight: normal;
+}
