@@ -11,7 +11,7 @@
 			return $affected_rows = $req->rowCount();
 		}
 	    public function getContacts() {
-		   $req = $this->db->query("SELECT * FROM contacts");
+		   $req = $this->db->query("SELECT * FROM contacts ORDER BY lastname, id");
 		   return $req->fetchAll(PDO::FETCH_ASSOC);
 		}
 	    public function updateContact($contact) {

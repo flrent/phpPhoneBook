@@ -7,7 +7,23 @@
 	    } 
 
 	    public function add($contact) { 
-	    	return $this->dbController->addContact($contact);
+	    	$erreurs = array();
+	    	if(strlen($contact->getLastname())==0) {
+	    		array_push($erreurs, "Le nom de famille est obligatoire.");
+	    	}
+	    	if(strlen($contact->getFirstname())==0) {
+	    		array_push($erreurs, "Le prénom est obligatoire.");
+	    	}
+	    	if(strlen($contact->getNumber())==0) {
+	    		array_push($erreurs, "Vous ajoutez un contact sans numéro ?");
+	    	}
+
+	    	if(count($erreurs)==0) {
+    			return $this->dbController->addContact($contact);
+	    	}
+	    	else {
+	    		return $erreurs;
+	    	}
 	    }
 	    public function get() { 
 	        return $this->model->text = 'Text Updated'; 

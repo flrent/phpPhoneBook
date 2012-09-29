@@ -9,7 +9,17 @@ li {list-style: none}
 
 header {}
 header ul {-webkit-padding-start:0;}
-header li {display: inline;padding:10px;background:#F8F8F8;color:#06F;border:1px solid #CCC;}
+header li {
+	cursor: pointer;
+	display: inline;
+	padding:10px;
+	background:#F8F8F8;
+	color:#06F;
+	border:1px solid #CCC;
+	border-radius: 4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+}
 
 #addForm {display:none;}
 .main {
@@ -21,6 +31,42 @@ header li {display: inline;padding:10px;background:#F8F8F8;color:#06F;border:1px
 	padding:20px;
 }
 h1 {
+	font: italic 30px Georgia,"DejaVu Serif",Arial;
 	color:#F60;
-	font-weight: normal;
+	padding-left:20px;
+}
+h3 {
+	font: italic 22px Georgia,"DejaVu Serif",Arial;
+	color:#F00;
+	padding-left:20px;
+	background:#F8E0E0;
+}
+h1 strong {cursor: pointer;}
+
+.phoneBook li {
+	border-bottom:1px dotted #CCC;
+	padding:10px;
+	cursor: crosshair;
+}
+input {
+	border:1px solid #DDD;
+	padding:10px;
+	border-radius: 4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+
+}
+input[type="button"] {
+	cursor: pointer;
+}
+.contact span {
+	padding:10px;
+	text-align: center;
+	font-size:16px;
+	color:#777;
+	font: italic 30px Georgia,"DejaVu Serif",Arial;
+}
+.contact span.number {color:#069;}
+footer {
+	text-align: right;
 }

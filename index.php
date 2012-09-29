@@ -8,6 +8,8 @@
 	$resultat;
 
 	ob_start(); // temporisation pour pouvoir mettre en cache avant de rendre la page et ainsi manipuler les headers plus aisément
+
+	
 	//router
 	if (isset($_GET['action'])) {
 		header('Cache-Control: no-cache, must-revalidate'); //IE FIX
@@ -24,7 +26,7 @@
 
 			case 'add':
 				if(isset($_GET['firstname'], $_GET['lastname'],$_GET['number'])) {
-					$newContact = new Contact(0, $_GET['firstname'], $_GET['lastname'],$_GET['number']);
+					$newContact = new Contact(0, $_GET['lastname'],$_GET['firstname'], $_GET['number']);
 					$resultat = $apiController->add($newContact);				
 				}
 				break;
@@ -37,7 +39,7 @@
 
 			case 'update':
 				if(isset($_GET['firstname'],$_GET['id'], $_GET['lastname'],$_GET['number'])) {
-					$newContact = new Contact($_GET['id'], $_GET['firstname'], $_GET['lastname'],$_GET['number']);
+					$newContact = new Contact($_GET['id'], $_GET['lastname'],$_GET['firstname'],$_GET['number']);
 					$resultat = $apiController->update($newContact);
 				}
 				break;
